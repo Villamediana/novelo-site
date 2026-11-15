@@ -38,40 +38,44 @@
   </header>
 
   <h1>Política de privacidade</h1>
-  <p class="date">Atualizada em 12 de novembro de 2026</p>
+  <p class="date">Atualizada em 15 de novembro de 2026</p>
 
   <div class="card">
-    <p><strong>Em resumo:</strong> o que você guarda no Novelo fica no seu celular. O app não tem conta, anúncio nem rastreamento. Sua voz vira texto no próprio celular. Só o texto (e o que se vê numa foto) vai pra um serviço de inteligência artificial na internet, pra ser organizado em tarefas, notas e diário.</p>
+    <p><strong>Em resumo:</strong> o que você guarda no Novelo fica no seu celular. O app não tem conta, anúncio nem rastreamento. Pra ouvir, ver e organizar, o que você diz e as fotos que manda passam pelo servidor do Novelo até um serviço de inteligência artificial, e a resposta volta: o servidor do Novelo não guarda o que você disse nem a resposta.</p>
   </div>
 
   <h2>Quem cuida dos seus dados</h2>
   <p>O Novelo é feito por Jose Miguel Villamediana Osorio, desenvolvedor independente no Brasil, responsável pelo tratamento dos dados descrito aqui, nos termos da Lei Geral de Proteção de Dados (LGPD). Contato: <a href="mailto:miguel.villamediana@outlook.com">miguel.villamediana@outlook.com</a>.</p>
 
   <h2>O que fica no seu celular</h2>
-  <p>Tudo o que você guarda (tarefas, notas, diário, fotos e os áudios que o app mantém) fica só no armazenamento do app no seu celular. O Novelo não tem servidor que guarde esse conteúdo e não pede conta nem login.</p>
+  <p>Tudo o que você guarda (tarefas, notas, diário, fotos e os áudios que o app mantém) fica no armazenamento do app no seu celular. O Novelo não pede conta nem login.</p>
 
-  <h2>Sua voz</h2>
-  <p>A gravação é transformada em texto no próprio celular, por um modelo de inteligência artificial que roda nele. O áudio não sai do aparelho. Depois de virar texto, ele é apagado, a não ser quando o som é o que vale guardar (uma melodia que você canta, por exemplo); aí fica junto do item, no celular.</p>
-
-  <h2>Suas fotos</h2>
-  <p>O texto de uma foto é lido no celular (com o ML Kit, do Google, que roda no aparelho; ele pode mandar ao Google dados técnicos de uso e desempenho, nunca a foto). O modelo no celular também descreve o que se vê nela. Quando você escolhe fotos da galeria, o app recebe só as que você escolheu. Fotos tiradas na câmera do app são salvas também na galeria do celular (pasta Novelo).</p>
-
-  <h2>O que vai pra internet, e pra quem</h2>
-  <p>Pra organizar o que você disse ou escreveu e responder suas perguntas, o Novelo manda pela internet a um serviço de inteligência artificial:</p>
+  <h2>A inteligência do Novelo (o padrão)</h2>
+  <p>Pra transformar a fala em texto, dizer o que se vê numa foto e organizar tudo em tarefas, notas e diário, o app manda pela internet ao <strong>servidor do Novelo</strong>, que repassa a um modelo de inteligência artificial e devolve a resposta:</p>
   <ul>
-    <li>o texto do que você disse ou escreveu;</li>
-    <li>numa foto, o texto lido nela e a descrição feita no celular (ou a própria foto, se você usa sua própria inteligência);</li>
-    <li>o que o modelo precisa pra entender o pedido: suas tarefas abertas, o diário do dia, os últimos itens guardados e os que podem ter a ver com o assunto.</li>
+    <li><strong>sua voz</strong>: a gravação, em pedaços, pra virar texto. No celular, o áudio é apagado depois de virar texto, a não ser quando o som é o que vale guardar (uma melodia que você canta, por exemplo);</li>
+    <li><strong>suas fotos e documentos</strong>: a foto (reduzida) pra ser descrita; de um documento, o nome, o começo do texto e, quando ele não tem texto, a imagem da primeira página;</li>
+    <li><strong>o texto</strong> do que você disse ou escreveu, e o que o modelo precisa pra entender o pedido: suas tarefas abertas, o diário do dia, os últimos itens guardados e os que podem ter a ver com o assunto;</li>
+    <li><strong>o que você digita na busca</strong>, pra achar também pelo sentido (quando não há modelo no celular).</li>
   </ul>
-  <p>Pra onde isso vai depende do que você escolhe em Ajustes:</p>
-  <ul>
-    <li><strong>Inteligência do Novelo</strong> (o padrão): o pedido passa pela <a href="https://openrouter.ai/privacy">OpenRouter</a> e é respondido por modelos gratuitos de outras empresas. Esses provedores podem registrar e guardar o que recebem, e alguns usam esses dados pra melhorar os próprios modelos, segundo as políticas de cada um. Se preferir que seus textos não vão pra eles, use a sua própria inteligência.</li>
-    <li><strong>Sua própria inteligência</strong>: o pedido vai direto ao serviço que você configurou (OpenAI, Anthropic, OpenRouter, Azure ou outro), na sua conta e sob a política dele. Sua chave fica no celular, cifrada pelo Android.</li>
-  </ul>
-  <p>O Novelo não guarda esses pedidos em nenhum servidor próprio.</p>
+  <p>O servidor do Novelo <strong>não guarda</strong> nada disso: nem a fala, nem a foto, nem o texto, nem a resposta. Ele repassa o pedido a provedores de modelos de inteligência artificial, hoje através da <a href="https://openrouter.ai/privacy">OpenRouter</a>, que ficam fora do Brasil. Esses provedores podem registrar e guardar o que recebem, segundo as políticas de cada um. Se preferir que nada disso saia do seu controle, use a sua própria inteligência (abaixo).</p>
+  <p>O texto de uma foto é lido no próprio celular (com o ML Kit, do Google, que roda no aparelho; ele pode mandar ao Google dados técnicos de uso e desempenho, nunca a foto). Quando você escolhe fotos da galeria, o app recebe só as que você escolheu. Fotos tiradas na câmera do app são salvas também na galeria do celular (pasta Novelo).</p>
 
-  <h2>Downloads</h2>
-  <p>O modelo que ouve e vê no celular é baixado do <a href="https://huggingface.co/privacy">Hugging Face</a>, que, como em qualquer download, vê o endereço de internet do aparelho.</p>
+  <h2>O que o servidor do Novelo guarda</h2>
+  <p>Não há login: cada instalação cria uma chave no próprio aparelho e assina com ela o que pede. Do aparelho, o servidor guarda só o necessário pra funcionar e evitar abuso:</p>
+  <ul>
+    <li>a metade pública dessa chave, a versão do app, o resultado da verificação de que é um aparelho e um app genuínos, e quando ele foi visto pela primeira e pela última vez;</li>
+    <li>um identificador do aparelho embaralhado (não dá pra voltar dele ao original), pra que o período de teste não recomece ao reinstalar, e o plano do aparelho (teste ou Novelo+);</li>
+    <li>de cada pedido, apenas números: a hora, o modelo que respondeu, quanto demorou, o tamanho e o custo. Esses registros são apagados depois de 30 dias; ficam só totais por hora, sem ligação com nenhum aparelho.</li>
+  </ul>
+  <p>O endereço de internet (IP) não é gravado.</p>
+
+  <h2>Sua própria inteligência</h2>
+  <p>Quem preferir pode usar, em Ajustes:</p>
+  <ul>
+    <li><strong>o modelo no celular</strong>, que ouve e vê sem internet: nada sai do aparelho. Ele é baixado uma vez do <a href="https://huggingface.co/privacy">Hugging Face</a>, que, como em qualquer download, vê o endereço de internet do aparelho;</li>
+    <li><strong>a sua API</strong> (OpenAI, Anthropic, OpenRouter, Azure ou outra): o pedido vai direto ao serviço que você configurou, na sua conta e sob a política dele, sem passar pelo servidor do Novelo. Sua chave fica no celular, cifrada pelo Android.</li>
+  </ul>
 
   <h2>Backup</h2>
   <p>O backup é um arquivo que o app grava na pasta que você escolhe (no celular ou numa pasta de nuvem que você mesmo escolheu). O Novelo não manda o backup pra nenhum outro lugar.</p>
@@ -81,14 +85,14 @@
     <li><strong>Microfone</strong>: gravar o que você fala, só quando você aperta o botão.</li>
     <li><strong>Câmera</strong>: tirar fotos dentro do app.</li>
     <li><strong>Notificações e alarmes</strong>: lembretes e o aviso de que o app está ouvindo ou organizando.</li>
-    <li><strong>Internet</strong>: organizar com a inteligência e baixar o modelo do celular.</li>
+    <li><strong>Internet</strong>: ouvir, ver e organizar com a inteligência.</li>
   </ul>
 
   <h2>O que o Novelo não faz</h2>
   <p>Não mostra anúncio, não usa ferramentas de análise ou rastreamento, não vende nem compartilha seus dados com ninguém além do que está descrito aqui. A Google Play pode coletar dados de instalação e de erros do app, segundo a <a href="https://policies.google.com/privacy">política do Google</a>.</p>
 
   <h2>Por quanto tempo, e como apagar</h2>
-  <p>Seus dados ficam no celular até você apagá-los no app ou desinstalá-lo. Desinstalar apaga tudo, menos os arquivos de backup que você salvou fora do app. Você pode ver, corrigir e apagar cada item no próprio app. Pra exercer qualquer direito da LGPD ou tirar dúvidas, escreva para <a href="mailto:miguel.villamediana@outlook.com">miguel.villamediana@outlook.com</a>.</p>
+  <p>O que você guarda fica no celular até você apagar no app ou desinstalar. Desinstalar apaga tudo do aparelho, menos os arquivos de backup que você salvou fora do app. Você pode ver, corrigir e apagar cada item no próprio app. No servidor do Novelo, os registros de cada pedido duram 30 dias, e o registro do aparelho é apagado a pedido. Pra exercer qualquer direito da LGPD (inclusive pedir que o registro do seu aparelho seja apagado: informe o código do aparelho, que aparece em Ajustes, embaixo da versão) ou tirar dúvidas, escreva para <a href="mailto:miguel.villamediana@outlook.com">miguel.villamediana@outlook.com</a>.</p>
 
   <h2>Crianças</h2>
   <p>O Novelo não é feito pra crianças com menos de 13 anos.</p>
