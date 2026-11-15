@@ -38,57 +38,62 @@
   </header>
 
   <h1>Privacy policy</h1>
-  <p class="date">Updated November 12, 2026</p>
+  <p class="date">Updated November 15, 2026</p>
 
   <div class="card">
-    <p><strong>In short:</strong> what you keep in Novelo stays on your phone. The app has no account, no ads and no tracking. Your voice becomes text on the phone itself. Only the text (and what can be seen in a photo) goes to an artificial intelligence service on the internet, to be organized into tasks, notes and a diary.</p>
+    <p><strong>In short:</strong> what you keep in Novelo stays on your phone. The app has no account, no ads and no tracking. To hear, see and organize, what you say and the photos you send pass through Novelo's server to an artificial intelligence service, and the answer comes back: Novelo's server keeps neither what you said nor the answer. The cloud backup, if you turn it on, leaves the phone already encrypted: nobody but you can open it.</p>
   </div>
 
   <h2>Who looks after your data</h2>
   <p>Novelo is made by Jose Miguel Villamediana Osorio, an independent developer in Brazil, who is responsible for the processing of data described here under Brazil's General Data Protection Law (LGPD). Contact: <a href="mailto:miguel.villamediana@outlook.com">miguel.villamediana@outlook.com</a>.</p>
 
   <h2>What stays on your phone</h2>
-  <p>Everything you keep (tasks, notes, diary, photos and the recordings the app keeps) stays only in the app's storage on your phone. Novelo has no server that stores this content and asks for no account or login.</p>
+  <p>Everything you keep (tasks, notes, diary, photos and the audio the app holds on to) stays in the app's storage on your phone. Novelo asks for no account and no login.</p>
 
-  <h2>Your voice</h2>
-  <p>Recordings are turned into text on the phone itself, by an artificial intelligence model that runs on it. The audio never leaves the device. Once it is text, the audio is deleted, unless the sound itself is what is worth keeping (a melody you sing, for example); then it stays with that item, on the phone.</p>
-
-  <h2>Your photos</h2>
-  <p>The text in a photo is read on the phone (with Google's ML Kit, which runs on the device; it may send Google technical usage and performance data, never the photo). The model on the phone also describes what can be seen in it. When you pick photos from your gallery, the app only receives the ones you picked. Photos taken with the app's camera are also saved to your phone's gallery (Novelo folder).</p>
-
-  <h2>What goes to the internet, and to whom</h2>
-  <p>To organize what you said or wrote and to answer your questions, Novelo sends to an artificial intelligence service over the internet:</p>
+  <h2>Novelo's intelligence (the default)</h2>
+  <p>To turn speech into text, say what a photo shows and organize it all into tasks, notes and diary, the app sends over the internet to <strong>Novelo's server</strong>, which passes it on to an artificial intelligence model and returns the answer:</p>
   <ul>
-    <li>the text of what you said or wrote;</li>
-    <li>for a photo, the text read in it and the description made on the phone (or the photo itself, if you use your own intelligence);</li>
-    <li>what the model needs to understand the request: your open tasks, today's diary, the latest items kept and those that may be related.</li>
+    <li><strong>your voice</strong>: the recording, in pieces, to become text. On the phone, the audio is deleted once it becomes text, unless the sound is what is worth keeping (a melody you sing, for example);</li>
+    <li><strong>your photos and documents</strong>: the photo (reduced) to be described; of a document, its name, the start of its text and, when it has no text, a picture of its first page;</li>
+    <li><strong>the text</strong> of what you said or wrote, and what the model needs to understand the request: your open tasks, the day's diary, the last items kept and those that may have to do with the subject;</li>
+    <li><strong>what you type in the search</strong>, to find by meaning as well (when there is no model on the phone).</li>
   </ul>
-  <p>Where it goes depends on what you choose in Settings:</p>
-  <ul>
-    <li><strong>Novelo's intelligence</strong> (the default): the request goes through <a href="https://openrouter.ai/privacy">OpenRouter</a> and is answered by free models from other companies. These providers may log and keep what they receive, and some use it to improve their own models, under each one's policy. If you would rather your texts not go to them, use your own intelligence.</li>
-    <li><strong>Your own intelligence</strong>: the request goes straight to the service you set up (OpenAI, Anthropic, OpenRouter, Azure or another), on your account and under its policy. Your key stays on the phone, encrypted by Android.</li>
-  </ul>
-  <p>Novelo does not keep these requests on any server of its own.</p>
+  <p>Novelo's server <strong>keeps none of it</strong>: not the speech, not the photo, not the text, not the answer. It passes the request on to providers of artificial intelligence models, today through <a href="https://openrouter.ai/privacy">OpenRouter</a>, which are outside Brazil. Those providers may log and keep what they receive, under each one's policies. If you would rather none of it leave your control, use your own intelligence (below).</p>
+  <p>The text of a photo is read on the phone itself (with Google's ML Kit, which runs on the device; it may send Google technical usage and performance data, never the photo). When you pick photos from the gallery, the app gets only the ones you picked. Photos taken with the app's camera are also saved to the phone's gallery (Novelo folder).</p>
 
-  <h2>Downloads</h2>
-  <p>The model that hears and sees on the phone is downloaded from <a href="https://huggingface.co/privacy">Hugging Face</a>, which, as with any download, sees the device's internet address.</p>
+  <h2>What Novelo's server keeps</h2>
+  <p>There is no login: each installation makes a key on the device itself and signs what it asks with it. Of the device, the server keeps only what it needs to work and to prevent abuse:</p>
+  <ul>
+    <li>the public half of that key, the app's version, the result of checking that the device and the app are genuine, and when it was first and last seen;</li>
+    <li>a scrambled identifier of the device (there is no way back from it to the original), so that the trial doesn't start over on a reinstall, and the device's plan (trial or Novelo+);</li>
+    <li>of each request, only numbers: the time, the model that answered, how long it took, its size and its cost. Those records are deleted after 30 days; only hourly totals remain, tied to no device.</li>
+  </ul>
+  <p>The internet address (IP) is not recorded.</p>
+
+  <h2>Your own intelligence</h2>
+  <p>Whoever prefers can use, in Settings:</p>
+  <ul>
+    <li><strong>the model on the phone</strong>, which hears and sees without internet: nothing leaves the device. It is downloaded once from <a href="https://huggingface.co/privacy">Hugging Face</a>, which, as with any download, sees the device's internet address;</li>
+    <li><strong>your API</strong> (OpenAI, Anthropic, OpenRouter, Azure or another): the request goes straight to the service you set up, on your account and under its policy, without passing through Novelo's server. Your key stays on the phone, encrypted by Android.</li>
+  </ul>
 
   <h2>Backup</h2>
-  <p>The backup is a file the app writes to the folder you choose (on the phone or in a cloud folder you chose yourself). Novelo does not send the backup anywhere else.</p>
+  <p><strong>In a folder</strong>: a file the app writes to the folder you choose (on the phone or in a cloud folder you chose yourself).</p>
+  <p><strong>In Novelo's cloud</strong> (Novelo+, if you turn it on): the phone encrypts everything before sending it, and Novelo's server keeps files it cannot open. The secret that opens the backup stays on your phone, in your Google account's safe on the device (Block Store, which Google carries to your next phone encrypted with your screen lock) and in the recovery code the app shows you to write down. Without that secret nobody opens the backup: not Novelo, not anyone with access to the server. The last versions are kept; turning the cloud backup off in the app erases everything that is there.</p>
 
   <h2>Permissions</h2>
   <ul>
     <li><strong>Microphone</strong>: to record what you say, only when you press the button.</li>
     <li><strong>Camera</strong>: to take photos inside the app.</li>
     <li><strong>Notifications and alarms</strong>: reminders, and the notice that the app is listening or organizing.</li>
-    <li><strong>Internet</strong>: to organize with the intelligence and download the on-phone model.</li>
+    <li><strong>Internet</strong>: hearing, seeing and organizing with the intelligence, and the cloud backup.</li>
   </ul>
 
   <h2>What Novelo does not do</h2>
   <p>It shows no ads, uses no analytics or tracking tools, and does not sell or share your data with anyone beyond what is described here. Google Play may collect install and crash data for the app, under <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
 
   <h2>How long, and how to delete</h2>
-  <p>Your data stays on the phone until you delete it in the app or uninstall it. Uninstalling deletes everything except backup files you saved outside the app. You can see, correct and delete each item in the app itself. To exercise any of your rights or ask a question, write to <a href="mailto:miguel.villamediana@outlook.com">miguel.villamediana@outlook.com</a>.</p>
+  <p>What you keep stays on the phone until you delete it in the app or uninstall it. Uninstalling deletes everything from the device, except the backup files you saved outside the app; Novelo's cloud backup is erased when you turn it off in the app. You can see, correct and delete each item in the app itself. On Novelo's server, the records of each request last 30 days, and the device's record is deleted on request. To exercise any right under the LGPD (including asking for your device's record to be deleted: quote the device code shown in Settings, under the version) or to ask questions, write to <a href="mailto:miguel.villamediana@outlook.com">miguel.villamediana@outlook.com</a>.</p>
 
   <h2>Children</h2>
   <p>Novelo is not made for children under 13.</p>
